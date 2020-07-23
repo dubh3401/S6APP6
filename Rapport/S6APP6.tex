@@ -1,0 +1,84 @@
+% ======================================================================
+
+
+% Sujet du document
+% Informations importantes
+%
+%
+% Prénom Nom
+% H. Dube 2020
+% ======================================================================
+% Ce code rassemble les efforts d'étudiants de la faculté de génie  
+% de l'université de Sherbrooke afin de faire un template LaTeX moderne
+% dédié à l'écriture de rapport universitaire.
+% Ce document est libre d'être utilisé et modifié.
+% ======================================================================
+
+% ----------------------------------------------------
+% Initialisation
+% ----------------------------------------------------
+\documentclass{udes_rapport} % Voir udes_rapport.cls
+\usepackage{amsmath}
+
+\numberwithin{equation}{section}
+\begin{document}
+\selectlanguage{french}
+
+% ----------------------------------------------------
+% Configurer la page titre
+% ----------------------------------------------------
+
+% Information
+\faculte{Génie}
+\departement{génie électrique et génie informatique}
+\app{6}{Propagation guidée d'ondes electromagnétiques}
+\professeur{François Boone}
+\etudiants{Hubert Dubé - dubh3401 \\ Gabriel Lavoie - lavg2007}
+\dateRemise{31 juillet 2020}
+
+
+% ======================================================================
+\pagenumbering{roman} % met les numéros de pages en romain
+% ----------------------------------------------------
+% Page titre
+% ----------------------------------------------------
+%\fairePageTitre{LOGO} % Options: [STD, LOGO]
+\begin{titlepage}
+\fairePageTitre{LOGO}
+\end{titlepage}
+\newpage
+
+% ----------------------------------------------------
+% Table des matières
+% ----------------------------------------------------
+\tableofcontents
+\newpage
+% ----------------------------------------------------
+% Table des figures
+% ----------------------------------------------------
+\listoffigures
+\newpage
+
+% ======================================================================
+% Document
+% ======================================================================
+\pagenumbering{arabic} % met des chiffres arabes
+\setcounter{page}{1} % reset les numéros de pages
+
+% ecrit ici budé
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
