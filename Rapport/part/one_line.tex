@@ -1,5 +1,19 @@
 % Circuit à une seule ligne
-
+\subsection{Démarche analytique}
+La première étape d'analyse consiste à trouver les coefficients de rebonds afin de pouvoir faire le diagramme de rebond (\textit{bounce diagramm}).
+Avec la formule 6.25 de Paul :
+\begin{equation}
+\Gamma_s = \frac{R_s - Z_c}{R_s + Z_c} = \frac{-2}{3}
+\end{equation}
+De la même façon, le coefficient de la charge est déterminé.
+Comme la charge n'est qu'un circuit ouvert, $R_L = \infty$.
+\begin{equation}
+\Gamma_L = \frac{R_s - Z_c}{R_s + Z_c} = 1
+\end{equation}
+D'après le résultat de $\Gamma_L$ il est attendu que le retour de l'onde soit toujours de la même valeur que l'onde envoyée. Pour ce qui est de $\Gamma_s$, comme il est négatif, la tension aura donc tendance à osciller vue que la valeur que l'onde renvoyée changera entre positive et négative à chaque rebond.
+Le diagramme de rebond se retrouve dans l'annexe \ref{Ann:bounce}. 
+Les résultats pour chaque instant $T$ sont dans le tableaux suivant :
+\input{part/table_bounce}
 
 %%%%%%%% FIGURE %%%%%%%
 %simple figure

@@ -298,6 +298,23 @@ Sherbrooke \\
     {
         \textcolor{red}{\textbf{#1}}
     }
+    
+% Part une nouvelle annexe
+% Usage: \newAnnexe{Nom d'annexe}
+    \DeclareDocumentCommand \newAnnexe
+    {
+        %Arguments
+        m       %nom de l'annexe
+    }
+    {
+        \newpage
+        \refstepcounter{section}
+        \normalfont{\huge{\bfseries{Annexe \Alph{section}}}}
+        \newline
+        \addcontentsline{toc}{section}{\Alph{section} #1}
+        \normalfont{\Large{\bfseries{#1}}}
+    }    
+    
 	
 \usepackage{mathtools}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
