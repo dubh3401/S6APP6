@@ -1,1 +1,61 @@
 % circuit à deux lignes
+\subsection{Caractéristiques de ligne pour avoir }%$Z_C = 50\Omega$}
+\note{comparer avec les résultats de la lignes simple}
+
+%%%%%%%% FIGURE %%%%%%%
+%simple figure
+\insertFigure{simple}{two_lines/base_G}{0.75}{Résultat de simulation pour la ligne 50 $\Omega$}
+%%%%%%%%%%%%%%%%%%%%%%
+%\begin{comment}
+\subsection{Longueur électrique et fréquence foncamentale}
+
+\subsection{Simulation avec variation de signal}
+\note{Analyse de simulation V3 et V4, et ensuite comparaison entre tous les graphiques}
+
+%%%%%%% FIGURE %%%%%%%
+%double figure
+\makebox[\textwidth][c]{
+\noindent\begin{minipage}{1.3\textwidth}
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{two_lines/base_G}{0.9}{void}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{two_lines/base_R}{1}{void}
+	\end{minipage} 
+\captionof{figure}{Observations initials} 
+\label{fig:G_R_init} 
+\end{minipage}
+}
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% FIGURE %%%%%%%
+%double figure
+\makebox[\textwidth][c]{
+\noindent\begin{minipage}{1.3\textwidth}
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{two_lines/G_rise_fall}{1}{void}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{two_lines/R_rise_fall}{0.9}{void}
+	\end{minipage} 
+\captionof{figure}{Changement pour $\tau_r = \tau_f = 0.5$ns} 
+\label{fig:G_R_rise_fall} 
+\end{minipage}
+}
+%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% FIGURE %%%%%%%
+%double figure
+\makebox[\textwidth][c]{
+\noindent\begin{minipage}{1.3\textwidth}
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{two_lines/G_E}{1}{void}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{two_lines/R_E}{1}{void}
+	\end{minipage} 
+\captionof{figure}{Changement de la longueur electrique pour E = 360} 
+\label{fig:G_R_E} 
+\end{minipage}
+}
+%%%%%%%%%%%%%%%%%%%%%%

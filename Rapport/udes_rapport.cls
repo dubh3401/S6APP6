@@ -281,13 +281,23 @@ Sherbrooke \\
     \ifthenelse{\equal{#1}{double}}{
 	\centering
 	\includegraphics[width=#3\textwidth]{#2}
-	\captionof{figure}{#4}
-	\label{fig:#2}
+	%\captionof{figure}{#4}
+	%\label{fig:#2}
 	}%
     
         
     }%{}%
 	}
+	
+	% Faire de ptite note pour après et la relecture
+    \DeclareDocumentCommand \note
+    {
+        %Arguments
+        m       %texte de la note
+    }
+    {
+        \textcolor{red}{\textbf{#1}}
+    }
 	
 \usepackage{mathtools}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
