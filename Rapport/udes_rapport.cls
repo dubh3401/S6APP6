@@ -98,7 +98,7 @@
 
 
 % Faire des références
-\RequirePackage[hidelinks]{hyperref}                            % Pour des référence clickables
+%\RequirePackage[hidelinks]{hyperref}                            % Pour des référence clickables
 \RequirePackage{natbib}                                         % Pour faire des références
 
 % Ajouter/contrôler des figures 

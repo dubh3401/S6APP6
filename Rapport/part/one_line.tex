@@ -17,7 +17,7 @@ Les résultats pour chaque instant $T$ sont dans le tableaux suivant :
 
 %%%%%%%% FIGURE %%%%%%%
 %simple figure
-\insertFigure{simple}{one_line/one_line_1}{0.75}{Résultat de simulation pour la ligne idéale de base}
+\insertFigure{simple}{one_line/one_line_1}{0.6}{Résultat de simulation pour la ligne idéale de base}
 %%%%%%%%%%%%%%%%%%%%%%
 
 En comparant les résultats obtenus à la main (tableau \ref{tab:bounce}) et les resultats obtenus pas simulation à la figure \ref{fig:one_line/one_line_1}, très peu de différences peuvent être trouvé, ce qui confirme que l'utilisation du diagramme de rebond et valide pour un système ayant des temps de monté et de descente très court, pour une ligne de transmission sans perte.
@@ -25,6 +25,7 @@ En comparant les résultats obtenus à la main (tableau \ref{tab:bounce}) et les
 
 %%%%%%% FIGURE %%%%%%%
 %double figure
+\vspace{0.3cm}
 \makebox[\textwidth][c]{
 \noindent\begin{minipage}{1.3\textwidth}
 	\begin{minipage}{0.5\textwidth}
@@ -32,19 +33,20 @@ En comparant les résultats obtenus à la main (tableau \ref{tab:bounce}) et les
 		$T = 0.5$ns
 	\end{minipage}%
 	\begin{minipage}{0.5\textwidth}
-		\insertFigure{double}{one_line/one_line_delay_0p1}{1}{void}
+		\insertFigure{double}{one_line/one_line_delay_0p1}{0.9}{void}
 		$T= 0.1$ns
 	\end{minipage} 
 \captionof{figure}{Variation du délai de propagation} 
 \label{fig:one_delay_var} 
 \end{minipage}
 }
+\vspace{0.3cm}
 %%%%%%%%%%%%%%%%%%%%%%
 
 En réduisant le délai de la ligne, le temps que l'onde doit parcourir pour passer de la source à la charge et de la charge à la source réduit. 
 Cela permet donc à la tension de se stabiliser plus rapidement, car l'atténuation des rebonds est plus rapide temporellement. 
 Ce phénomène est observable sur la figure \ref{fig:one_delay_var} où la stabilisation du signal est visiblement plus rapide que dans le premier cas.
-Un tel \note{racourssissement} du délais est principalement du à un \note{racourssissement} de la ligne, car l'impédance caractéristique n'a pas changée et le signal de la source non plus. 
+Un tel raccourcissement du délais est principalement du à un raccourcissement de la ligne, car l'impédance caractéristique n'a pas changée et le signal de la source non plus. 
 Dépendamment de la ligne de transmission, une vitesse maximale de propagation existe et cette vitesse impose donc un délai dans la ligne.
 
 

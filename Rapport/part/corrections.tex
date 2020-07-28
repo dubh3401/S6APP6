@@ -1,1 +1,81 @@
 % corrections du circuit
+
+Afin d'avoir la meilleur réduction de la diaphonie, la ligne utilisé est presque la plus courte possible et les deux microstrip se trouvent le plus loin possible l'une de l'autre. Les caractéristiques de la ligne sont donc :
+
+\begin{center}
+\captionof{table}{caractéristiques de la ligne non idéales} \label{tab:carac_line}
+\begin{tabular}{c*{1}c| c*{3}c}
+\toprule
+Composante	&Valeur	&Composante	&Valeur\\ 
+\midrule
+\midrule
+W	&2.8mm	&$Z_C$	&50.57$\Omega$\\
+S	&15mm	&E		&1.57$^{\circ}$\\
+L	&7mm	&-		&-\\
+\bottomrule
+\end{tabular}
+\end{center}
+L'impédance caractéristique est gardée à 50$\Omega$ afin de satisfaire le standard établi.
+
+%%%%%%% FIGURE %%%%%%%
+%double figure
+\vspace{0.3cm}
+\makebox[\textwidth][c]{
+\noindent\begin{minipage}{1.3\textwidth}
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{corrections/G_no}{0.8}{void}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{corrections/R_no}{0.8}{void}
+	\end{minipage} 
+\captionof{figure}{Réponse du circuit sans adaptation} 
+\label{fig:G_R_SnL_cor_none} 
+\end{minipage}
+}
+\vspace{0.3cm}
+%%%%%%%%%%%%%%%%%%%%%
+
+Les résultats de la figure \ref{fig:G_R_SnL_cor_none} sont le point de départ sans aucune correction.
+Le principal enjeu est donc de réduire les pics suivant les changements de tension très abrupte. Comme établie plus tôt, ceux ci sont en grande partie du à $\tau_r = \tau_f = 0.1$ns. 
+En augmantant ces valeurs à 1ns, ce qui donne un plateau de 3ns, les pics sont déjà beaucoup plus petits et la diaphonie est très prêt de la spécification à atteindre, les résultats sont à la figure \ref{fig:G_R_SnL_cor_rise_fall}.
+
+%%%%%%% FIGURE %%%%%%%
+%double figure
+\vspace{0.3cm}
+\makebox[\textwidth][c]{
+\noindent\begin{minipage}{1.3\textwidth}
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{corrections/G_rise_fall}{0.8}{void}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{corrections/R_rise_fall}{0.8}{void}
+	\end{minipage} 
+\captionof{figure}{Réponse du circuit avec $\tau_r = \tau_f = 1$ns} 
+\label{fig:G_R_SnL_cor_rise_fall} 
+\end{minipage}
+}
+\vspace{0.3cm}
+%%%%%%%%%%%%%%%%%%%%
+
+Une dernière correction sera d'ajouter un condensateur du coté de la source afin de venir lisser d'avantage la transistion vers le plateau et ainsi réduire l'intensité des harmoniques supérieures. De manière empirique une valeur de 55pF fut trouvée suffisante pour atteinde les requis de diaphonie tout en gardant l'allure du signal reconnaissable. Le résultat final avec toutes les modifications se retrouve à la figure \ref{fig:G_R_SnL_cor_done}.
+
+%%%%%%% FIGURE %%%%%%%
+%double figure
+\vspace{0.3cm}
+\makebox[\textwidth][c]{
+\noindent\begin{minipage}{1.3\textwidth}
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{corrections/G_done}{0.8}{void}
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{corrections/R_done}{0.8}{void}
+	\end{minipage} 
+\captionof{figure}{Réponse du circuit avec corrections} 
+\label{fig:G_R_SnL_cor_done} 
+\end{minipage}
+}
+\vspace{0.3cm}
+%%%%%%%%%%%%%%%%%%%%
+%Une première étape de correction est d'apdapter la charge à la ligne afin de réduire le plus possible l'effet de rebond.
+%Une résistance de 60$\Omega$ est mise en parallèle au condensateur de 5pF à cette fin. 
+%Comme il se retrouve en à faire un diviseur de tension avec la résistance de source, la tension de sorie
