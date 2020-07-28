@@ -80,6 +80,9 @@
 % Modifier l'interligne
 \linespread{1.5}                                                % Pour un interligne de 1.5
 
+% Remove paragraph indent
+\setlength\parindent{0pt}
+
 % Faire l'en-tête et le pied de page
 \RequirePackage{fancyhdr}                                       % inclut le package
 \RequirePackage{lastpage}                                       % Derniere page (pour le pied)

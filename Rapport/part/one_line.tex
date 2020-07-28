@@ -20,18 +20,41 @@ Les résultats pour chaque instant $T$ sont dans le tableaux suivant :
 \insertFigure{simple}{one_line/one_line_1}{0.75}{Résultat de simulation pour la ligne idéale de base}
 %%%%%%%%%%%%%%%%%%%%%%
 
+En comparant les résultats obtenus à la main (tableau \ref{tab:bounce}) et les resultats obtenus pas simulation à la figure \ref{fig:one_line/one_line_1}, très peu de différences peuvent être trouvé, ce qui confirme que l'utilisation du diagramme de rebond et valide pour un système ayant des temps de monté et de descente très court, pour une ligne de transmission sans perte.
 
-%%%%%%%% FIGURE %%%%%%%
-%simple figure
-\insertFigure{simple}{one_line/one_line_delay_0p5}{0.75}{Résultat de simulation pour la ligne idéale avec $T = 0.5$ns}
+
+%%%%%%% FIGURE %%%%%%%
+%double figure
+\makebox[\textwidth][c]{
+\noindent\begin{minipage}{1.3\textwidth}
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{one_line/one_line_delay_0p5}{0.9}{void}
+		$T = 0.5$ns
+	\end{minipage}%
+	\begin{minipage}{0.5\textwidth}
+		\insertFigure{double}{one_line/one_line_delay_0p1}{1}{void}
+		$T= 0.1$ns
+	\end{minipage} 
+\captionof{figure}{Variation du délai de propagation} 
+\label{fig:one_delay_var} 
+\end{minipage}
+}
 %%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%% FIGURE %%%%%%%
-%simple figure
-\insertFigure{simple}{one_line/one_line_delay_0p1}{0.75}{Résultat de simulation pour la ligne idéale avec $T= 0.1$ns}
-%%%%%%%%%%%%%%%%%%%%%%
+En réduisant le délai de la ligne, le temps que l'onde doit parcourir pour passer de la source à la charge et de la charge à la source réduit. 
+Cela permet donc à la tension de se stabiliser plus rapidement, car l'atténuation des rebonds est plus rapide temporellement. 
+Ce phénomène est observable sur la figure \ref{fig:one_delay_var} où la stabilisation du signal est visiblement plus rapide que dans le premier cas.
+Un tel \note{racourssissement} du délais est principalement du à un \note{racourssissement} de la ligne, car l'impédance caractéristique n'a pas changée et le signal de la source non plus. 
+Dépendamment de la ligne de transmission, une vitesse maximale de propagation existe et cette vitesse impose donc un délai dans la ligne.
+
 
 %%%%%%%% FIGURE %%%%%%%
 %simple figure
 \insertFigure{simple}{one_line/one_line_rise_fall}{0.75}{Résultat de simulation pour la ligne idéale avec $T= 0.1$ns, $\tau_r = \tau_f = 0.5$ns}
 %%%%%%%%%%%%%%%%%%%%%%
+
+En gardant le délais de 0.1ns comme dans la seconde partie de la figure \ref{fig:one_delay_var}, le temps de monté et descente a été changé pour 0.5ns au lieu de 0.1ns comme dans toutes les autres figures montrées plus tôt.
+Il est possible d'y remarquer que les pics sont beaucoup plus petit que dans les cas précédents.
+L'augmentation de la durée de la monté correspond aussi à une diminution de l'amplitude des harmoniques secondaires du signal.
+En réduisant le contenu fréquentiel, une baisse de l'amplitude des $sinc$ complémentaires cause donc une baisse des pics. 
+Ceci est représenté par l'équation 6.84b de Paul.
