@@ -1,5 +1,5 @@
 % matching d'impedance, circuit a 2 lignes
-
+En premier lieu, une impédance en entrée est ajoutée au circuit, en série avec l'impédance de la source. Avec une adaptation à l'entrée  on ne remarque aucune différence par rapport à la diaphonie à $V_4$. De plus, on remarque deux niveaux d'amplitude dans la forme du signal $V_1$, ce qui témoigne de la réflexion du signal envoyé.
 %%%%%%% FIGURE %%%%%%%
 %double figure
 \makebox[\textwidth][c]{
@@ -15,7 +15,7 @@
 \end{minipage}
 }
 %%%%%%%%%%%%%%%%%%%%%%
-
+Deuxièmement, une impédance est ajoutée en parAvec une adaptation en sortie, on remarque que le signal à $V_2$ est pratiquement le même qu'à $V_1$, mais avec un délai. La ligne de transmission n'a donc aucun reflet à sa terminaison. De plus, la tension à $V_4$ est nulle.
 %%%%%%% FIGURE %%%%%%%
 %double figure
 \makebox[\textwidth][c]{
@@ -31,6 +31,8 @@
 \end{minipage}
 }
 %%%%%%%%%%%%%%%%%%%%%%
+Finalement, les impédances sont adaptés des deux côtés de la ligne. Ce qu'on remarque premièrement c'est que les deux avantages procurés par l'adaptation en sortie sont toujours là, c'est-à-dire que la ligne de transmission de provoque aucune réflexion du signal vers l'entrée. Cependant, l'adaptation en entrée cause une perte en tension, attribuable au facteur.
+\[K = \frac{Z_C}{R_S+Z_C}\]
 
 %%%%%%% FIGURE %%%%%%%
 %double figure
@@ -46,4 +48,5 @@
 \label{fig:G_R_SnL_matched} 
 \end{minipage}
 }
-%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+En bref, on conclut que, pour minimiser la diaphonie et la modification du signal en entrée, l'idéal est d'adapter l'impédance en sortie avec l'impédance caractéristique de la ligne, et de minimiser l'impédance de la source.

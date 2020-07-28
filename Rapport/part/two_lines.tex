@@ -1,17 +1,24 @@
 % circuit à deux lignes
-\subsection{Caractéristiques de ligne pour avoir }%$Z_C = 50\Omega$}
-\note{comparer avec les résultats de la lignes simple}
+Avec un circuit à deux lignes et un plan de masse, deux modes de propagation sont présents. On détermine donc, à partir de l'outil \texttt{linecalc}, les impédances $Z_e$ et $Z_o$ qui permettent de conserver une impédance caractéristique de $50\,\omega$.
+\[Z_e = 53.28\quad Z_o = 49.85\]
+\[Z_c = \sqrt{Z_eZ_c} = 51.54\]
 
+La longueur électrique de la ligne est de $22.19°$. En terme de longeur d'onde, ceci représente une longueur électrique de $0.0616\lambda$. Avec une période de $10\,ns$, la source a une fréquence fondamentale de $100\,MHz$. 
+\\
+En comparaison avec la ligne simple, on remarque que l'effet capacitif du couplage avec la deuxième ligne amplifie les harmoniques du signal à $V_2$. On voit cet effet dans les pics lors de changement rapides d'amplitude.
 %%%%%%%% FIGURE %%%%%%%
 %simple figure
 \insertFigure{simple}{two_lines/base_G}{0.75}{Résultat de simulation pour la ligne 50 $\Omega$}
 %%%%%%%%%%%%%%%%%%%%%%
 %\begin{comment}
-\subsection{Longueur électrique et fréquence foncamentale}
+
 
 \subsection{Simulation avec variation de signal}
-\note{Analyse de simulation V3 et V4, et ensuite comparaison entre tous les graphiques}
-
+Dans l'analyse des signaux à $V_3$ et $V_4$, on remarque premièrement que les deux signaux ont presque exactement la même forme, et suivent les directions de $V_2$. Les signaux sont centrés sur 0, ce qui s'explique par le fait qu'ils sont induits par un couplage capacitif, qui supprime la composante DC. 
+\\
+À partir de cette simulation, on fait varier le temps de montée et de descente du signal. On remarque encore que les harmoniques à haute fréquences sont réduites. 
+\\
+Un simulation avec une longueur électrique de 360 est ensuite réalisée. Comme on peut s'y attendre, le rebond à la sortie de la ligne arrive en même temps que la prochaine impulsion. En diaphonie, le résultat est deux trains d'impulsions identiques séparés par une période.
 %%%%%%% FIGURE %%%%%%%
 %double figure
 \makebox[\textwidth][c]{

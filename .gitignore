@@ -2,3 +2,12 @@
 */slprj/
 Rapport/build/*
 Rapport/*.pdf
+*~
+*.swp
+*.aux
+*.lof
+*.log
+*.out
+
+*.synctex.gz
+*.toc
